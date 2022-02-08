@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman Game</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <style>  
+        .centered {
+            position: absolute;
+            top: 17px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container center-align white-text flow-text orange lighten-2" style="width:100%;">
+        <h1>Hangman Game</h1>
+    </div>
+
+
+    <div class="container center-align">
+        <div class="col s12 m2">
+            <img id="default" class ="z-depth-3" src="0.jpg" alt="default" width="300" height="350">
+        </div>
+    </div>
+
+    <div class="container center-align">
+        <p id="p">Already Used: </p>
+        <p id="p1">Hits: </p>
+        <img id="1" src="white.jpg" alt="default" width="100" height="100"></img>
+        <img id="2" src="white.jpg" alt="default" width="100" height="100"></img>
+        <img id="3" src="white.jpg" alt="default" width="100" height="100"></img>
+        <img id="4" src="white.jpg" alt="default" width="100" height="100"></img>
+        <img id="5" src="white.jpg" alt="default" width="100" height="100"></img>
+        <img id="6" src="white.jpg" alt="default" width="100" height="100"></img>
+        <img id="7" src="white.jpg" alt="default" width="100" height="100"></img>
+        <img id="8" src="white.jpg" alt="default" width="100" height="100"></img>
+        <img id="9" src="white.jpg" alt="default" width="100" height="100"></img>
+        <img id="10" src="white.jpg" alt="default" width="100" height="100"></img>
+        <img id="11" src="white.jpg" alt="default" width="100" height="100"></img>
+        <img id="12" src="white.jpg" alt="default" width="100" height="100"></img>
+        <img id="13" src="white.jpg" alt="default" width="100" height="100"></img>
+        <img id="14" src="white.jpg" alt="default" width="100" height="100"></img>
+    </div>
+
+    <Script>
+
+        var alreadyI = 0;
+        var hit = 0;
+        var counter = 0;
+        var index = 0;
+        var index2 = 0;
+        var done = 0;
+        var no = 0;
+
+        const word_chars = [];
+        const already = [];
+        const hits = [];
+        const words = ["boba fett", "din djarin", "obi wan kenobi", "grogu", "jon favreau"];
+
+        var rand = Math.floor(Math.random() * 5);
+        var word = words[rand];
+
+        for (let i in word) {
+            if (word.charAt(i) != ' ') {
+                if (index == 0) {   
+                    document.getElementById('1').src="blank.jpg";
+                }
+                else if (index == 1) {
+                    document.getElementById('2').src="blank.jpg";
+                }
+                else if (index == 2) {
+                    document.getElementById('3').src="blank.jpg";
+                }
+                else if (index == 3) {
+                    document.getElementById('4').src="blank.jpg";
+                }
+                else if (index == 4) {
+                    document.getElementById('5').src="blank.jpg";
+                }
+                else if (index == 5) {
+                    document.getElementById('6').src="blank.jpg";
+                }
+                else if (index == 6) {
+                    document.getElementById('7').src="blank.jpg";
+                }
+                else if (index == 7) {
+                    document.getElementById('8').src="blank.jpg";
+                }
+                else if (index == 8) {
+                    document.getElementById('9').src="blank.jpg";
+                }
+                else if (index == 9) {
+                    document.getElementById('10').src="blank.jpg";
+                }
+                else if (index == 10) {
+                    document.getElementById('11').src="blank.jpg";
+                }
+                else if (index == 11) {
+                    document.getElementById('12').src="blank.jpg";
+                }
+                else if (index == 12) {
+                    document.getElementById('13').src="blank.jpg";
+                }
+                else if (index == 13) {
+                    document.getElementById('14').src="blank.jpg";
+                }
+                word_chars.push(word[i])
+            }
+            else {
+                if (index == 0) {
+                    document.getElementById('1').src="white.jpg";
+                }
+                else if (index == 1) {
+                    document.getElementById('2').src="white.jpg";
+                }
+                else if (index == 2) {
+                    document.getElementById('3').src="blank.jpg";
+                }
+                else if (index == 3) {
+                    document.getElementById('4').src="white.jpg";
+                }
+                else if (index == 4) {
+                    document.getElementById('5').src="white.jpg";
+                }
+                else if (index == 5) {
+                    document.getElementById('6').src="white.jpg";
+                }
+                else if (index == 6) {
+                    document.getElementById('7').src="white.jpg";
+                }
+                else if (index == 7) {
+                    document.getElementById('8').src="white.jpg";
+                }
+                else if (index == 8) {
+                    document.getElementById('9').src="blank.jpg";
+                }
+                else if (index == 9) {
+                    document.getElementById('10').src="blank.jpg";
+                }
+                else if (index == 10) {
+                    document.getElementById('11').src="blank.jpg";
+                }
+                else if (index == 11) {
+                    document.getElementById('12').src="blank.jpg";
+                }
+                else if (index == 12) {
+                    document.getElementById('13').src="blank.jpg";
+                }
+                else if (index == 13) {
+                    document.getElementById('14').src="blank.jpg";
+                }
+            }
+            index++
+        }
+
+        function getArraysIntersection(a1,a2){
+            return  a1.filter(function(n) { return a2.indexOf(n) !== -1;});
+        }
+
+        function arrayEquals(a, b) {
+            return Array.isArray(a) &&
+                Array.isArray(b) &&
+                a.length === b.length &&
+                a.every((val, index) => val === b[index]);
+        }
+
+        document.addEventListener('keydown', function() {
+            if (done != 0) {
+                window.location.reload();
+            }
+
+            var name = event.key;
+            for (var i in word_chars) {
+                if (name == word_chars[i]) {
+                    hit = 1
+                }
+            }
+            
+            for (let i in already) {
+                if (name == already[i]) {
+                    alreadyI = 1
+                }
+            }
+
+            if (alreadyI != 1) {
+                already.push(name)
+                if (hit == 1) {
+                    hits.push(name)
+                    var paragraph = document.getElementById("p1");
+                    paragraph.textContent += " ";
+                    paragraph.textContent += name;
+                }
+                else {
+                    var paragraph = document.getElementById("p");
+                    paragraph.textContent += " ";
+                    paragraph.textContent += name;
+                }
+            }
+
+
+            if (hit == 1 && alreadyI != 1) {
+                var same = getArraysIntersection(word_chars, hits);
+                console.log(same);
+                console.log(word_chars);
+                console.log(hits);
+                if (arrayEquals(same, word_chars)) {
+                    alert("You have won!! Congratulations the word was: " + word)
+                    window.location.reload();
+                }
+            }
+            else if (alreadyI != 1) {
+                if (counter == 0) {
+                    document.getElementById('default').src="1.jpg";
+                }
+                else if (counter == 1) {
+                    document.getElementById('default').src="2.jpg";
+                }
+                else if (counter == 2) {
+                    document.getElementById('default').src="3.jpg";
+                }
+                else if (counter == 3) {
+                    document.getElementById('default').src="4.jpg";
+                }
+                else if (counter == 4) {
+                    document.getElementById('default').src="5.jpg";
+                }
+                else if (counter == 5) {
+                    document.getElementById('default').src="6.jpg";
+                }
+                else if (counter == 6) {
+                    document.getElementById('default').src="7.jpg";
+                }
+                else if (counter == 7) {
+                    document.getElementById('default').src="8.jpg";
+                }
+                else if (counter == 8) {
+                    document.getElementById('default').src="9.jpg";
+                }
+                else if (counter == 9) {
+                    document.getElementById('default').src="10.jpg";
+                    done++
+                    alert("You have lost, the word was: " + word)
+                }
+                counter++
+            }
+            alreadyI = 0
+            hit = 0
+        })
+    
+    </Script>
+
+</body>
+</html>

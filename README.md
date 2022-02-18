@@ -4,6 +4,19 @@ Created applications using JavaScript, AJAX and JSON/XML for client-server commu
 
 ---
 
+
+### Blogging
+
+<p align="center">
+<img src ="images/blogging.png" width="650">
+</p>
+
+### User Management
+
+<p align="center">
+<img src ="images/user_management.png" width="650">
+</p>
+
 ### Minesweeper
 
 <p align="center">

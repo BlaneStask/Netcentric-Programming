@@ -1,0 +1,52 @@
+body {
+    position: relative;
+    margin:0 auto;
+    height:100%;
+    text-align:center;
+    font-family: 'Quicksand', sans-serif;
+    background: url(skyimage.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1,h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+}
+
+.card-deck{
+    position:relative;
+    margin:0 auto;
+    text-align:center;
+}
+
+#current{
+    max-width: 25rem;
+    margin:0 auto;
+}
+
+img{
+    position: relative;
+    margin:0 auto;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0);
+    width: 250px;
+    height: auto;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-block {
+    background-color: rgba(255, 255, 255, 0);
+    width: auto;
+    height: auto;
+    color: white;
+    overflow-wrap: break-word;
+    text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

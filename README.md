@@ -5,6 +5,12 @@ Created applications using JavaScript, AJAX and JSON/XML for client-server commu
 ---
 
 
+### Weather
+
+<p align="center">
+<img src ="images/weather.png" width="650">
+</p>
+
 ### Blogging
 
 <p align="center">

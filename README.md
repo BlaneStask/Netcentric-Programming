@@ -4,6 +4,11 @@ Created applications using JavaScript, AJAX and JSON/XML for client-server commu
 
 ---
 
+### 2048
+
+<p align="center">
+<img src ="images/2048.png" width="650">
+</p>
 
 ### Weather
 

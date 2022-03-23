@@ -1,0 +1,151 @@
+html, body {
+    margin: 0 auto;
+    padding: 0;
+    background: #f4f1e5;
+    height:100%;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inria Sans',sans-serif;
+}
+
+.header{
+    margin: 0 auto;
+    text-align: center;
+    color: #c4b8ac;
+}
+
+#name{
+    position: fixed;
+    size: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    position: relative;
+    margin: auto;
+}
+
+#game {
+    position: relative;
+    text-align: center;
+}
+
+#game_info {
+    margin: 0;
+    display: block;
+    color:#c4b8ac;
+}
+
+#grid_container {
+    margin:auto;
+    display: block;
+    width: 45%;
+}
+
+.list-group{
+    margin: auto;
+    width: 50%;
+    max-height: 400px;
+    overflow:scroll;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 5px;
+}
+
+.score{
+    color: #c4b8ac;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
+.cells {
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 35%;
+    background: #c4b8ac;
+}
+
+.game-over {
+    position: relative;
+    font-size: 25px;
+    margin: 0;
+}
+
+.lost {
+    color: #eb9368;
+}
+
+.won {
+    color: #a2bcc8;
+}
+
+.ending-score{
+    color:#c4b8ac;
+}
+
+.play-again{
+    color: #a2bcc8;
+    cursor: pointer;
+}
+
+.view_leaderboards{
+    color: #8b9fb3;
+    cursor: pointer;
+}
+
+.cell-0{
+    color:transparent;
+}
+
+.cell-2{
+    background-color: #eee4da;
+}
+
+.cell-4{
+    background-color: #ede0c8;
+}
+
+.cell-8{
+    background-color: #f2b179;
+}
+
+.cell-16{
+    background-color: #f59563;
+}
+
+.cell-32{
+    background-color: #f67c5f;
+}
+
+.cell-64{
+    background-color: #f65e3b;
+}
+
+.cell-128{
+    background-color: #edcf72;
+}
+
+.cell-256{
+    background-color: #edcc61;
+}
+
+.cell-512{
+    background-color: #edc850;
+}
+
+.cell-1024{
+    background-color: #edc53f;
+}
+
+.cell-2048{
+    background-color: #dbb63c;
+}

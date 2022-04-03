@@ -16,6 +16,12 @@ Created applications using JavaScript, AJAX and JSON/XML for client-server commu
 <img src ="images/weather.png" width="650">
 </p>
 
+### Music Streaming
+
+<p align="center">
+<img src ="images/MusicStreaming.png" width="650">
+</p>
+
 ### Blogging
 
 <p align="center">

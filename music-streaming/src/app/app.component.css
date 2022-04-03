@@ -1,0 +1,50 @@
+.header {
+    color:white;
+    background-color: DarkSalmon;
+    text-align: left;
+    height: 90px;
+    margin-bottom: none;
+}
+
+h2{
+    color:white;
+    background-color: DarkSalmon;
+    text-align: left;
+    height: 70px;
+    margin-bottom: none;
+    margin-left: 20px;
+    margin-top: 10px;
+    display: inline-flex;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: DarkSalmon;
+    color: white;
+    display: block;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;
+}
+
+.change, :link, :visited {
+    text-decoration: none;
+    color: rgb(245, 238, 238);
+    background-color: DarkSalmon;
+    border: none;
+    padding: 6px 22px;
+    text-align: center;
+    display: inline-flex;
+    font-size: 16px;
+    margin-top: none;
+    height: auto;
+  }
+
+.change:hover {
+    height: auto;
+    transform: scale(1.04, 1);
+    background-color: rgb(226, 171, 153)!important;
+}
+

@@ -1,0 +1,20 @@
+<div class="header">
+  <h2>Welcome<br>
+    Library for Streaming Music
+    <nav>
+      <ul>
+        <button class="change"><a [routerLink]="['/']">Home</a></button>
+        <button class="change"><a [routerLink]="['/library']">Library</a></button>
+      </ul>
+    </nav>
+  </h2>
+</div>
+
+<footer>
+    <button class="change" style="margin-top: 15px;" #playBtn mat-flat-button color="primary" (click)="goBackSong()">Back</button>
+    <button class="change" #playBtn mat-flat-button color="primary" (click)="playSong()">PLAY</button>
+    <button class="change" #stopBtn mat-button color="primary" (click)="stopSong()">STOP</button>
+    <button class="change" #stopBtn mat-button color="primary" (click)="skipSong()">Forward</button>
+</footer>
+
+<router-outlet></router-outlet>

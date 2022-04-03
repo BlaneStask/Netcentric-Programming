@@ -1,0 +1,19 @@
+.list-group{
+  margin: auto;
+  width: 50%;
+  max-height: 250px;
+  overflow:scroll;
+}
+
+.songs{
+  font-family: 'Inria Sans', sans-serif;
+  background-color: black;
+  padding-top: 5%;
+}
+
+.instructions{
+  color: white;
+  text-align: center;
+  font-family: 'Inria Sans', sans-serif;
+  padding-bottom: 10px;
+}
